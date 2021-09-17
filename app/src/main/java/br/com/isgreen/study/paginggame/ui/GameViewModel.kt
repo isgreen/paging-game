@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.map
 
 class GameViewModel(
     exceptionHandlerHelper: ExceptionHandlerHelper,
-     private val repository: GameContract.Repository
+    private val repository: GameContract.Repository
 ) : BaseViewModel(exceptionHandlerHelper), GameContract.ViewModel {
 
     override fun getGames(): Flow<PagingData<GameAdapterItem>> {
@@ -35,34 +35,7 @@ class GameViewModel(
                         return@insertSeparators GameAdapterItem.SeparatorItem("${after.roundedRatingCount} stars")
                     }
 
-                    if (before.roundedRatingCount > after.roundedRatingCount){
-                        if (after.roundedRatingCount >= 1) {
-                            return@insertSeparators GameAdapterItem.SeparatorItem("${after.roundedRatingCount} stars")
-                        } else {
-                            return@insertSeparators GameAdapterItem.SeparatorItem("No stars")
-                        }
-                    } else {
-                        null
-                    }
-                }
-            }
-            .cachedIn(viewModelScope)
-    }
-
-    override fun getGamesLiveData(): LiveData<PagingData<GameAdapterItem>> {
-        return repository.getGamesLiveData()
-            .map { pagingData -> pagingData.map { GameAdapterItem.GameItem(it) } }
-            .map {
-                it.insertSeparators { before, after ->
-                    if (after == null) {
-                        return@insertSeparators null
-                    }
-
-                    if (before == null) {
-                        return@insertSeparators GameAdapterItem.SeparatorItem("${after.roundedRatingCount} stars")
-                    }
-
-                    if (before.roundedRatingCount > after.roundedRatingCount){
+                    if (before.roundedRatingCount > after.roundedRatingCount) {
                         if (after.roundedRatingCount >= 1) {
                             return@insertSeparators GameAdapterItem.SeparatorItem("${after.roundedRatingCount} stars")
                         } else {

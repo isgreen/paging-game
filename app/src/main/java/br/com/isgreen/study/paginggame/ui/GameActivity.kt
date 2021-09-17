@@ -75,11 +75,6 @@ class GameActivity : BaseActivity() {
                 adapter.submitData(it)
             }
         }
-//        viewModel.getGamesLiveData().observe(this@GameActivity) {
-//            lifecycleScope.launch {
-//                adapter.submitData(it)
-//            }
-//        }
     }
 
     private fun showPlaceholderView(message: String) {

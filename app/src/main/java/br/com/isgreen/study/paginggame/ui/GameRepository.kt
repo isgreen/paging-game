@@ -27,16 +27,4 @@ class GameRepository(private val apiHelper: ApiHelper) : GameContract.Repository
             }
         ).flow
     }
-
-    override fun getGamesLiveData(): LiveData<PagingData<Game>> {
-        return Pager(
-            config = PagingConfig(
-                pageSize = 10,
-                enablePlaceholders = false
-            ),
-            pagingSourceFactory = {
-                GamePagingSource(apiHelper = apiHelper)
-            }
-        ).liveData
-    }
 }

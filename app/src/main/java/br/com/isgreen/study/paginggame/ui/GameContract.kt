@@ -15,11 +15,9 @@ interface GameContract {
 
     interface ViewModel : BaseContract.ViewModel {
         fun getGames(): Flow<PagingData<GameAdapterItem>>
-        fun getGamesLiveData(): LiveData<PagingData<GameAdapterItem>>
     }
 
     interface Repository {
         fun getGames(): Flow<PagingData<Game>>
-        fun getGamesLiveData(): LiveData<PagingData<Game>>
     }
 }
