@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Games</string>
+
+    <!--Messages-->
+    <string name="no_data">No data</string>
+    <string name="try_again">Try again</string>
+    <string name="no_server_response">No response</string>
+    <string name="failed_request">There was a fail</string>
+    <string name="failed_server">There was a server fail</string>
+    <string name="no_internet_signal">No internet connection</string>
+    <string name="there_was_fail_try_again">There was a fail. Try again.</string>
+    <string name="failed_action">There was a failure to perform this action</string>
+    <string name="failed_to_fetch_the_list_of_games">Failed to fetch the list of games</string>
+    <!--Messages-->
+
+    <!-- Game -->
+    <string name="retry">Retry</string>
+    <string name="released_on">Released on %s</string>
+    <!-- Game -->
+</resources>

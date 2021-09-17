@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margins -->
+    <dimen name="margin_mini">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <!-- Margins -->
+
+    <!--Corner-->
+    <dimen name="edit_corner">6dp</dimen>
+    <dimen name="shape_corner">10dp</dimen>
+    <dimen name="button_corner_small">6dp</dimen>
+    <dimen name="button_corner_radius">100dp</dimen>
+    <dimen name="shape_cut_corner_small">6dp</dimen>
+    <dimen name="shape_cut_corner_medium">12dp</dimen>
+    <!--Corner-->
+
+    <!-- Text Size -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_big">18sp</dimen>
+    <!-- Text Size -->
+</resources>
